@@ -2,4 +2,3 @@ baseURL = "https://mcu.bernardobordadagua.com"
 languageCode = "en-us"
 theme = "bare"
 title = "MCU Timeline"
-amp = true
