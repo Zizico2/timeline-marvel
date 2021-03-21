@@ -13,6 +13,7 @@
 {{ $image := $image.Resize "720x1066" }}
 <div style="--aspect-ratio: 720/1066">
   <img
+    loading="lazy"
     src="{{ $image.Permalink }}"
     alt="{{ .slug }}"
     style="width: 100vw; display: block"
