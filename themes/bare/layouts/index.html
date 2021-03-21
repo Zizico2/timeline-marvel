@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="I'm a description" />
     <style>
       /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -369,6 +370,28 @@
         scroll-behavior: smooth;
       }
       */
+      [style*="--aspect-ratio"] > :first-child {
+        width: 100%;
+      }
+      [style*="--aspect-ratio"] > img {
+        height: auto;
+      }
+      @supports (--custom: property) {
+        [style*="--aspect-ratio"] {
+          position: relative;
+        }
+        [style*="--aspect-ratio"]::before {
+          content: "";
+          display: block;
+          padding-bottom: calc(100% / (var(--aspect-ratio)));
+        }
+        [style*="--aspect-ratio"] > :first-child {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+        }
+      }
     </style>
     <title>MCU Timeline</title>
   </head>
@@ -383,9 +406,8 @@
   -->
     <div class="container">
       <div id="chronological">
-        {{ range sort .Site.Data.films.chronological.order }}
-        {{ partial "film-thumbnail.html" . }}
-        {{ end }}
+        {{ range .Site.Data.films.chronological.order }} {{ partial
+        "film-thumbnail.html" . }} {{ end }}
       </div>
     </div>
   </body>
