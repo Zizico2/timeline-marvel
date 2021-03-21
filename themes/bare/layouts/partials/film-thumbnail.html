@@ -1,0 +1,7 @@
+{{ $scratch := newScratch }}
+{{ $scratch.Set "path" "images/" }}
+{{ $scratch.Add "path" .slug }}
+{{ $scratch.Add "path" ".jpg" }}
+{{ $path := $scratch.Get "path"}}
+{{ $image := resources.Get $path }}
+<img src="{{ $image.Permalink }}" alt="{{ .slug }}" style="width: 100vw; display: block;">

@@ -1,12 +1,27 @@
 order:
   - name: "Captain America: The First Avenger"
     release_date: 2011-07-22
+    slug: captain_america_the_first_avenger
 
   - name: "Captain Marvel"
     release_date: 2019-03-08
+    slug: captain_marvel
 
   - name: "Iron Man"
     release_date: 2008-03-02
+    slug: iron_man
+
+  - name: "Captain America: The First Avenger"
+    release_date: 2011-07-22
+    slug: captain_america_the_first_avenger
+
+  - name: "Captain Marvel"
+    release_date: 2019-03-08
+    slug: captain_marvel
+
+  - name: "Iron Man"
+    release_date: 2008-03-02
+    slug: iron_man
 #order = [
 #   { name = "Captain America: The First Avenger", release_date = 2008-03-02 },
 #  { name = "Captain Marvel", release_date = true },
